@@ -154,7 +154,7 @@ const scenes = {
     image: "assets/side8c.png",
     alt: "grillbar",
     choices: [
-      { label: "Afslut", url: "landingpage.html" },
+      { label: "Afslut", url: "index.html" },
       { label: "Tilbage til valget", next: "valg1" },
     ],
   },
@@ -201,7 +201,7 @@ const scenes = {
     image: "assets/side11b.png",
     alt: "fængsel",
     choices: [
-      { label: "Afslut", url: "landingpage.html" },
+      { label: "Afslut", url: "index.html" },
       { label: "Tilbage til valget", next: "valg2" },
     ],
   },
@@ -288,7 +288,7 @@ const scenes = {
     image: "assets/side15a.png",
     alt: "fed",
     choices: [
-      { label: "Afslut", url: "landingpage.html" },
+      { label: "Afslut", url: "index.html" },
       { label: "Tilbage til valget", next: "valg3" },
     ],
   },
@@ -299,7 +299,7 @@ const scenes = {
     image: "assets/side16.png",
     alt: "taget",
     choices: [
-      { label: "Afslut", url: "landingpage.html" },
+      { label: "Afslut", url: "index.html" },
       { label: "Tilbage til valget", next: "valg3" },
     ],
   },
