@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strømmen Under Byen — interaktiv e-bog (prototype)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="left">
+        <div class="title">Strømmen Under Byen</div>
+        <div class="subtitle">Interaktiv e-bog · København · El/energi</div>
+      </div>
+      <div class="pillbar">
+        <div class="pill">Navn: <strong id="uiName">—</strong></div>
+        <div class="pill">Kapitel: <strong id="uiChapter">1</strong></div>
+        <div class="pill">Scene: <strong id="uiScene">1</strong></div>
+        <button class="btn" id="btnRestart" type="button">Nulstil</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" aria-live="polite">
+        <div class="scene-title">
+          <h1 id="sceneTitle">Indlæser…</h1>
+          <span class="tag" id="sceneTag">—</span>
+        </div>
+        
+        <img id="sceneImage" class="scene-image hidden" alt="Scene illustration" />
+
+        <div class="story" id="sceneText"></div>
+
+
+        <div class="nav">
+          <button class="btn" id="btnPrev" type="button">← Tilbage</button>
+          <button class="btn primary" id="btnNext" type="button">Fortsæt →</button>
+        </div>
+      </section>
+
+      <aside class="card panel">
+        <h2 id="panelTitle">Kom i gang</h2>
+
+        <div id="nameGate" class="gate">
+          <div class="prompt">
+            <strong>Vælg dit navn</strong><br/>
+            Det navn bliver brugt i historien (og gemmes på din enhed).
+          </div>
+          <div class="row">
+            <input class="input" id="nameInput" placeholder="Fx Nora, Aya, Freja…" maxlength="18" />
+            <button class="btn primary" id="btnSaveName" type="button">Start</button>
+          </div>
+          <div class="small muted">Tip: Du kan ændre det ved at trykke “Nulstil”.</div>
+        </div>
+
+        <div id="puzzleWrap" class="puzzle hidden">
+          <div class="prompt" id="puzzlePrompt"></div>
+
+          <div id="puzzleChoices" class="choices hidden"></div>
+
+          <div id="puzzleNumber" class="hidden">
+            <label class="small muted" for="numberInput">Skriv dit svar (tal):</label>
+            <input class="input" id="numberInput" inputmode="decimal" placeholder="Fx 4" />
+          </div>
+
+          <div class="row">
+            <button class="btn" id="btnHint" type="button">Hint</button>
+            <button class="btn primary" id="btnCheck" type="button">Tjek</button>
+          </div>
+
+          <div id="hintBox" class="hint hidden"></div>
+          <div id="feedbackBox" class="feedback hidden"></div>
+        </div>
+
+        <div class="small muted" id="panelNote">
+          Opgaver låser historien op. Du kan få op til 3 hints pr. opgave.
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

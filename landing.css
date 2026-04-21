@@ -1,0 +1,105 @@
+/* ========== LANDING PAGE ========== */
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #0b1220, #05070f);
+  color: white;
+}
+
+/* Header */
+.landing-header{
+  text-align: center;
+  padding: 48px 16px 24px;
+}
+
+.landing-header h1{
+  margin: 0 0 8px;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.landing-header p{
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Container */
+.landing-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid: 4 bøger pr række */
+.book-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Bog-kort */
+.book-card{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-card:hover{
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.12);
+}
+
+.book-card img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Tekst */
+.book-card h2{
+  font-size: 18px;
+  margin: 6px 0 0;
+}
+
+.book-card p{
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Kommer snart */
+.coming-soon{
+  cursor: default;
+  opacity: 0.5;
+}
+
+.coming-soon:hover{
+  transform: none;
+}
+
+.placeholder{
+  height: 220px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.3);
+}
+
+/* Responsiv */
+@media (max-width: 1000px){
+  .book-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  .book-grid{
+    grid-template-columns: 1fr;
+  }
+}

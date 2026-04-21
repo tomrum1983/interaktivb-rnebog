@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skraldeguld</title>
+
+  <!-- Brug book.css (anbefalet). Hvis du stadig bruger style.css, så lad den stå. -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Topbar: kun lyd -->
+  <header class="topbar">
+    <div class="audio-controls">
+      <button id="audioToggle" class="icon-btn" aria-label="Start/Stop lyd">🔈</button>
+      <label class="sr-only" for="volume">Lydstyrke</label>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.35" />
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-live="polite">
+      <!-- Tilbage -->
+      <button id="backBtn" class="back-btn" aria-label="Gå tilbage">←</button>
+
+      <!-- Luk bog -->
+      <button id="closeBook" class="close-btn" aria-label="Luk bogen">✕</button>
+
+      <!-- Billede -->
+      <div class="media">
+        <img id="sceneImage" src="" alt="" />
+      </div>
+
+      <!-- Tekst + valg -->
+      <div class="content">
+        <h1 id="sceneTitle"></h1>
+        <p id="sceneText"></p>
+
+        <div id="choices" class="choices"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lydfiler (to spor samtidigt) -->
+  <audio id="bgAudio" src="assets/ambient.mp3" loop preload="auto"></audio>
+  <audio id="ambientAudio" src="assets/jazz.mp3" loop preload="auto"></audio>
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
