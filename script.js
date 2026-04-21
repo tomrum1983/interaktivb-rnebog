@@ -6,7 +6,7 @@
  */
 
 // ====== SETTINGS ======
-const LANDING_PAGE_URL = "landingpage.html"; // ret hvis nødvendigt (fx "../landingpage.html")
+const LANDING_PAGE_URL = "index.html"; // ret hvis nødvendigt (fx "../landingpage.html")
 
 // ====== STATE ======
 let currentSceneId = "start";
